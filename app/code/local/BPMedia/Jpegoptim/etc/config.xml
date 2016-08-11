@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<config>
+  <modules>
+    <BPMedia_Jpegoptim>
+      <version>0.1.0</version>
+    </BPMedia_Jpegoptim>
+  </modules>
+  <global>
+    <helpers>
+      <jpegoptim>
+        <class>BPMedia_Jpegoptim_Helper</class>
+      </jpegoptim>
+    </helpers>
+	<models>
+	  <jpegoptim>
+		<class>BPMedia_Jpegoptim_Model</class>
+		<resourceModel>jpegoptim_mysql4</resourceModel>
+	  </jpegoptim>
+	</models>
+    <events>
+	  <catalog_product_save_after> <!-- identifier of the event we want to catch -->
+        <observers>
+          <catalog_product_save_after_handler> <!-- identifier of the event handler -->
+            <type>model</type> <!-- class method call type; valid are model, object and singleton -->
+            <class>jpegoptim/observer</class> <!-- observers class alias -->
+            <method>optimize</method>  <!-- observer's method to be called -->
+            <args></args> <!-- additional arguments passed to observer -->
+          </catalog_product_save_after_handler>
+        </observers>
+      </catalog_product_save_after>
+    </events>
+  </global>
+</config> 

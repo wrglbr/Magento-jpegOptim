@@ -1,0 +1,20 @@
+# external
+/.tmp
+/vendor
+/.sample-data
+/composer.phar
+/bin
+/compile
+/.modman
+
+# magento
+/magento
+
+# grunt
+/node_modules
+
+# bower
+/bower_components
+
+#ide files
+.idea

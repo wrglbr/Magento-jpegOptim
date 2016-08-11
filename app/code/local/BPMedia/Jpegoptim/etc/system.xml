@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<config>
+	  <tabs>
+		<bpmedia translate="label" module="jpegoptim">
+            <label>bpmedia</label>
+            <sort_order>150</sort_order>
+        </bpmedia>
+	  </tabs>
+	  <sections>
+		<jpegoptim  translate="label" module="jpegoptim">                    
+		<label>Product Images Optiomization</label>
+		<tab>bpmedia</tab>
+		<frontend_type>text</frontend_type>
+		<sort_order>0</sort_order>
+		<show_in_default>1</show_in_default>
+		<show_in_website>1</show_in_website>
+		<show_in_store>1</show_in_store>            
+					<groups>
+				      <setting translate="label"> 
+					  <label>General Settings</label>
+					  <frontend_type>text</frontend_type>
+					  <sort_order>0</sort_order>
+					  <show_in_default>1</show_in_default>
+					  <show_in_website>1</show_in_website>
+					  <show_in_store>1</show_in_store>
+				       <fields>
+                          <enable translate="label">
+                            <label>Enable</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>0</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                          </enable>
+					   </fields>
+					   </setting>
+					</groups>
+		</jpegoptim>
+	  </sections>
+</config>
